@@ -1,0 +1,22 @@
+int a = 12;
+
+// missing semi colon so an error must occur
+bool @b = false
+
+a = a + 4;
+
+for(int i = 5; i < 12 i = i + 3)
+{
+	a = a * 2;
+}
+
+int _power(int base, int power)
+{
+	for(int i = 0; i < power; i = i + 1)
+	{
+		base = base * power;
+	}
+	return base;
+}
+// error must occur since method names begin with _
+int x = power(2,4);

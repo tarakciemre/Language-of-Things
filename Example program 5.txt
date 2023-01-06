@@ -1,0 +1,19 @@
+// Works 7/24
+while(true)
+{
+	// light level => 0 (none) | 1 (low-mid) | 2 (mid) | 3 (high-mid) | 4 (high)
+	int lightLevel = _read($LightSensor);
+	int nonStaticMorningHour = 8 - lightLevel;
+	int nonStaticEveningHour = 16 + lightLevel;
+	
+	if((_getTimeHour() > nonStaticMorningHour && _getTimeHour() < nonStaticEveningHour) || lightLevel > 1)
+	{
+		_setSwitchOn(#smartCurtainOpener);
+		_setSwitchOff(#smartInternalLightning);
+		_print("Curtains are opened. Internal lightning are off.");
+	} else {
+		_setSwitchOff(#smartCurtainOpener);
+		_setSwitchOn(#smartInternalLightning);
+		_print("Curtains are closed. Internal lightning are on.");
+	}
+}

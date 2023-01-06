@@ -1,0 +1,39 @@
+bool _turnRight( sensor $psl )
+{
+	int pressure = _read($psl);
+	if( pressure > 0 )
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool _turnLeft( sensor $psr )
+{
+	int pressure = _read($psr);
+	if( pressure > 0 )
+	{	
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+for(int i = 0; i < 4; i = i + 1)
+{	
+		bool @c = _read($PressureSensorLeft);
+		if( @c ) 
+		{
+			_setSwitchOn(#rightTurn);
+		}
+		else
+		{
+			_setSwitchOn(#leftTurn);
+		}
+}
+_toggleSwitch(#leftTurn);

@@ -1,0 +1,20 @@
+// This is a program for a smart coffee machine
+string s;
+_scan(s);
+int a = 1;
+while( a < 30 )
+{
+	_waitFor(5000);
+  if(_read($TemperatureSensor) > 60)
+  {
+		_makeCoffee();
+  }
+	a = a + 1;
+}
+
+void _makeCoffee()
+{
+	_setSwitchOn(#CoffeeInitiationSwitch);
+	_waitFor(10000);
+	_setSwitchOn(#CoffeeInitiationSwitch);
+}

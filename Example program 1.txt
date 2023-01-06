@@ -1,0 +1,75 @@
+_connect("https/address.of.first/device");
+
+int a = _read($PressureSensor);
+
+
+bool @a = true;
+int b = 14;
+double c = -14.5;
+
+int q;
+int p;
+int r;
+q = 5;
+p = 3 * q;
+r = ( 3 * q ) + 5;
+
+int a; 
+
+int a = 5; 
+a = 5; 
+// adfasdfsdf
+bool @a = true && false || (a < 5);
+@b = (@a == false);
+
+if(@b == false)
+{
+	@b = true;
+} 
+else if(@a == true)
+{
+	@c = false;
+}
+
+_setSwitchOn(#MyOutputSwitch);
+_setSwitchOff(#MyOutputSwitch);
+
+
+int _myNewFunction( int a, sensor $b, switch #k)
+{
+	k = b;
+}
+
+int a = 0;
+for(int i = 0; i < 4; i = i + 1)
+{	
+		a = a + i;
+}
+bool @b1 = true; 
+while(@b1){
+	@b1 = @b1 && false;
+	int a = 2;
+	int c = 19;
+	a = (a + c) * 2;
+}
+
+bool @a = true;
+bool @c = true && @a;
+bool @d = true || @c;
+
+double MyValue = 3 * _read($TemperatureSensor) / 3; 
+
+
+int _newMethod(int a, string b){
+	int x = 2;
+	b = "str";
+	return a + x;
+}
+void _voidMethod()
+{
+	int a = 5;
+	double d = 4.2;
+	a = a + 12;
+}
+_post(data);
+int i = 1;

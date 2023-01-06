@@ -1,0 +1,10 @@
+double d = 4.5;
+d = d + 9;
+// misput semi colon so error must occur
+while(true);
+{
+	d = 2;
+}
+
+d = d * 2;
+
